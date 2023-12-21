@@ -4,6 +4,10 @@ API using the Express, serving as an interface for scraping product information 
 
 # launch
 
+```sh
+cp .env.example .env
+```
+
 For testing you can use `api-test.http`` with [vscode rest client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) or curl
 
 ![GIF description](./scrape-nike.gif)
@@ -70,3 +74,9 @@ await simulateProcessing(10000, false); // Simulate 10 second processing time
 ```
 
 #### Provision of the final result using the initial endpoint post-calculation ✔️.
+
+#### TODO
+
+- fix dockerised setup
+- add practical tests
+- add html extraction starategy using openApiChatGpt
