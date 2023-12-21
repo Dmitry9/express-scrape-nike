@@ -6,6 +6,8 @@ API using the Express, serving as an interface for scraping product information 
 
 For testing you can use `api-test.http`` with [vscode rest client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) or curl
 
+![GIF description](./scrape-nike.gif)
+
 ```sh
 npm run build
 npm run start
