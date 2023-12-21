@@ -1,0 +1,6 @@
+node_modeles
+dist
+logs
+.env
+.env.local
+node_modules
