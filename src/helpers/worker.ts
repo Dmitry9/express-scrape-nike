@@ -12,7 +12,7 @@ export async function scrapeNikeProduct(
   try {
     console.log("Scraping data:", { productId });
 
-    await simulateProcessing(3000, false); // Simulate 10 second processing time
+    await simulateProcessing(10000, false); // Simulate 10 second processing time
     const urlToScrape = url.format(URL_BASE.nike(productId));
     const result = await extractHtml(urlToScrape);
 

@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import puppeteer from "puppeteer";
 import { parseHtml } from "../html-parse/nike";
 
@@ -7,7 +6,7 @@ export async function extractHtml(url: string) {
   let html;
 
   try {
-    console.log(chalk.yellow("⛏️⛏️⛏️ PUPPETTEER STARTS"));
+    console.log("⛏️⛏️⛏️ PUPPETTEER STARTS");
     browser = await puppeteer.launch({
       args: [
         "--disable-setuid-sandbox",
@@ -37,12 +36,12 @@ export async function extractHtml(url: string) {
   } catch (e) {
     console.log(e);
     await browser?.close();
-    console.log(chalk.red("PUPPETTEER EXITS"));
+    console.log("🚫🚫🚫 PUPPETTEER EXITS");
     throw new Error("No HTML returned from puppeteer!");
   }
 
   await browser?.close();
-  console.log(chalk.green("✔️✔️✔️ PUPPETTEER EXITS"));
+  console.log("✔️✔️✔️ PUPPETTEER EXITS");
 
   if (!html) {
     throw new Error("No HTML returned from puppeteer!");
